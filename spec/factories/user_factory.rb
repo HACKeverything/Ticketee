@@ -7,4 +7,7 @@ FactoryGirl.define do
       admin true
     end
   end
+
+  # test account:  test@jj.com
+  #      password: password
 end
