@@ -11,7 +11,9 @@
         <li><%= link_to "Edit Ticket", [:edit, @project, @ticket],
           class: "edit" %></li>
       <% end %>
-      <li><%= link_to "Delete Ticket", [@project, @ticket], method: :delete, class: "delete" %></li>
+      <% if policy(@ticket).destroy? %>
+        <li><%= link_to "Delete Ticket", [@project, @ticket], method: :delete, class: "delete" %></li>
+      <% end %>
     </ul>
   </header>
 
